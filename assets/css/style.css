@@ -28,6 +28,11 @@ html, body {
     scroll-behavior: smooth;
 }
 
+section {
+    height: 100vh;
+
+}
+
 .menu {
     width: 100%;
     height: 100px;
@@ -56,28 +61,38 @@ html, body {
     padding: 5px;
 }
 
-.about {
-    display: grid;
-    grid-template-columns: 1fr 45%;
-    grid-template-rows: auto;
 
+/* .about {
+    display: grid;
+    grid: auto-flow / 1fr 1.5fr;
+    
     height: 100vh;
     background: var(--color4);
+
     
+} */
+
+.about {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr; 
+    grid-template-areas: 
+      ". ."; 
 }
 
 .about-content{
     display: flex;
-    align-items: center;
+    align-content: center;
     justify-content: center;
     flex-wrap: wrap;
     margin: 0;
-}
+} 
 
 .about-content h1 {
     width: 50%;
     background:violet;
     text-align: center;
+    
 }
 
 .about-content h2 {
@@ -85,37 +100,48 @@ html, body {
     width: 100%;
     font-size: 1em;
     text-align: center;
-    margin: 0;
+    margin-top: 20px;
 }
 
 
-.column2 {
+/*.column2 {
     background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     
-}
+} */
 
 .column2 img {
+    display: grid;
     background-position: center center;
     background-size: cover;
     width: 250px;
     height: 250px;
-    margin: 20px;
+    margin: 50% 50%;
     border-radius: 50%;
     box-shadow: 3px 3px 5px var(--color5);
 }
 
 .projects {
+    display: flex;
     height: 100vh;
     background: var(--color2);
 }
 
+.information h1 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
 .information {
     background: var(--color4);
-    height: 72.7vh;
+}
+
+.information img {
+    display: inline-flex;
+    
 }
 
 .container {
@@ -126,9 +152,9 @@ html, body {
 
 }
 
-.img {
+/* .img {
     margin-top: 50px;
-}
+} */
 
 footer {
     font-family: 'Courier New', Courier, monospace;
@@ -137,8 +163,7 @@ footer {
     display: flex;
     align-items: center;
     justify-items: center;
-    width: 100%;
-    height: 150px;
+    height: 70px;
     bottom: 0;
     left: 0;
 }
@@ -156,10 +181,12 @@ footer p {
 #copy {
     background-color: #062C5B;
     color: #fff;
+
     font-family: 'Open Sans', sans-serif;
     font-size: 0.8em;
     display: block;
     text-align: center;
     bottom: 0;
+    left: 0;
     padding: 3px;
 }
